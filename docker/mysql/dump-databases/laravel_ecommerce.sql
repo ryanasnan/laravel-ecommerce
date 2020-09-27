@@ -15,6 +15,15 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- Create User and Grant Privileges
+
+CREATE DATABASE IF NOT EXISTS laravel_ecommerce;
+
+CREATE user 'host'@'%' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON *.* TO 'host'@'%';
+
+use laravel_ecommerce;
+
 --
 -- Table structure for table `categories`
 --

@@ -21,24 +21,20 @@ docker-compose up --build
 ```bash
 docker exec -it php-laravel-ecommerce composer install 
 ```
-- 
+- database
+```bash
+docker exec mysql-laravel-ecommerce sh -c 'exec mysql -uroot -p"root" < /db/laravel_ecommerce.sql'
+```
+- add to your host (virtual host)
 
+`127.0.0.1 laravel-ecommerce.rf`
 
-add to your host (virtual host)
+and, try access on browser `laravel-ecommerce.rf`
 
-laravel-ecommerce.rf
-
-try access on browser
-
+PS : stop all service using another app (like xampp)
 
 ### Admin Login
 
 visit `laravel-ecommerce.rf/admin`
 
 user/password: `adminweb@adminweb.com/password`
-
-
-
-1. `php artisan ecommerce:install`. This will migrate the database and run any seeders necessary. See [this episode](https://www.youtube.com/watch?v=L3EbWJmmyjo&index=18&list=PLEhEHUEU3x5oPTli631ZX9cxl6cU_sDaR).
-1. `npm install`
-1. `npm run dev`
