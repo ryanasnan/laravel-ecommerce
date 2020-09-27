@@ -15,7 +15,7 @@ original repo : https://github.com/drehimself/laravel-ecommerce-example
 - Clone the repo and `cd` into it
 - running up all container (it will take so long, depend on your connection of course)
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 - install composer
 ```bash
